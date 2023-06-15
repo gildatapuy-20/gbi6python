@@ -19,3 +19,13 @@ def traductor(secuencia):
         break
       peptido += AmAc  #equivale al append
   return([seqc,peptido])
+
+
+def gcp(secuencia):
+   """
+   gcp realiza el cálculo del porcentaje de contenido de Gc y Cs
+   input: secuencia de nucléotidos
+   output: porcentaje de gc
+   """
+   pgc = round(100*(secuencia.count("C") + secuencia.count("G"))/len(secuencia), 2)
+   return pgc
